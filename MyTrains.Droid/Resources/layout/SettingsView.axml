@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/default_horizontal_padding"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Select currency for the app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="17dp"
+        android:textColor="@color/primary"
+        android:layout_marginTop="10dp" />
+    <Mvx.MvxSpinner
+        android:layout_width="match_parent"
+        android:background="@drawable/spinner_border"
+        android:layout_height="30dp"
+        android:spinnerMode="dropdown"
+        android:layout_below="@id/textView1"
+        android:id="@+id/CurrenciesSpinner"
+        android:layout_marginTop="10dp"
+        local:MvxItemTemplate="@layout/item_currency"
+        local:MvxDropDownItemTemplate="@layout/item_currency"
+        local:MvxBind="ItemsSource Currencies; SelectedItem ActiveCurrency, Mode=TwoWay; HandleItemSelected SwitchCurrencyCommand" />
+    <TextView
+        android:textSize="15dp"
+        android:text="About Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@id/CurrenciesSpinner"
+        android:layout_marginTop="30dp"
+        local:MvxBind="Text AboutContent" />
+    <Button
+        android:id="@+id/WebButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Visit our site"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/white"
+        android:layout_marginLeft="1dp"
+        android:textSize="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        local:MvxBind="Click HelpCommand" />
+</RelativeLayout>

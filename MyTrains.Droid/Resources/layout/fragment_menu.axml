@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    android:layout_width="@dimen/drawer_width"
+    android:layout_height="match_parent">
+    <Mvx.MvxListView
+        android:id="@+id/navigation_drawer_list"
+        local:MvxItemTemplate="@layout/item_menu"
+        local:MvxBind="ItemsSource MenuItems; ItemClick MenuItemSelectCommand"
+        android:divider="@null"
+        android:scrollbars="vertical"
+        android:choiceMode="singleChoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#FFFFFF" />
+</LinearLayout>

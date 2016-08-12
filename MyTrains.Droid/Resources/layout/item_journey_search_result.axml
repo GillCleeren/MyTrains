@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    local:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/default_horizontal_padding">
+        <LinearLayout
+            android:id="@+id/titleLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/DepartureDateTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure Date: "
+                android:textColor="@color/primary"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/DepartureDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure Date"
+                android:textColor="@color/primary"
+                android:textSize="17dp"
+                local:MvxBind="Text JourneyDate, Converter=DateTimeToDay" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/titleLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/departureLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/FromCityTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="From city"
+                    android:textColor="@color/normal_text"
+                    android:textSize="17dp"
+                    local:MvxBind="Text FromCity.CityName" />
+                <TextView
+                    android:id="@+id/DepartureTimeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Departure"
+                    android:textColor="@color/primary"
+                    android:textSize="15dp"
+                    local:MvxBind="Text DepartureTime, Converter=DateTimeToTime" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/arrivalLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/toCityTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="To city"
+                    android:textColor="@color/normal_text"
+                    android:textSize="17dp"
+                    local:MvxBind="Text ToCity.CityName" />
+                <TextView
+                    android:id="@+id/arrivalTimeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival time"
+                    android:textColor="@color/primary"
+                    android:textSize="15dp"
+                    local:MvxBind="Text ArrivalTime, Converter=DateTimeToTime" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/titleLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/PriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/primary"
+                android:textSize="17dp"
+                local:MvxBind="Text Price, Converter=CurrencyToString" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

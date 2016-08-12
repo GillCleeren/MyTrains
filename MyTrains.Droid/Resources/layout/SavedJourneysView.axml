@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Mvx.MvxListView
+        android:id="@+id/searchresults_list"
+        android:divider="@null"
+        android:scrollbars="vertical"
+        android:padding="@dimen/default_horizontal_padding"
+        android:choiceMode="singleChoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        local:MvxItemTemplate="@layout/item_saved_journey"
+        local:MvxBind="ItemsSource SavedJourneys" />
+</LinearLayout>

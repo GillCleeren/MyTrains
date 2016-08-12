@@ -1,0 +1,15 @@
+﻿<resources>
+  
+  <style name="Theme.AppCompat.Light.NoActionBar" parent="@style/Theme.AppCompat.Light">
+  </style>
+  
+  <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primaryDark</item>
+    <item name="colorAccent">@color/accent</item>
+		<item name="android:fontFamily">sans-serif-light</item>
+   
+  </style>
+</resources>

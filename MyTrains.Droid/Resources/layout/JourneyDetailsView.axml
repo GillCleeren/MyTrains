@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/default_horizontal_padding">
+    <RelativeLayout
+        android:id="@+id/titleLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/DepartureDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            
+            android:textColor="@color/primary"
+            local:MvxLang="Text DepartureDateTextView"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/DepartureDateTextViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DepartureDateTextView"
+            android:text="Departure Date"
+            android:textColor="@color/normal_text"
+            android:textSize="17dp"
+            local:MvxBind="Text SelectedJourney.JourneyDate,  
+              Converter=DateTimeToDay" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/departureLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLinearLayout"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/FromCityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From: "
+            android:textColor="@color/primary"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/FromCityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FromCityTitleTextView"
+            android:text="From city"
+            android:textColor="@color/normal_text"
+            android:textSize="17dp"
+            local:MvxBind="Text SelectedJourney.FromCity.CityName" />
+        <TextView
+            android:id="@+id/DepartureTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FromCityTitleTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/FromCityTextView"
+            android:text="Departure"
+            android:textColor="@color/normal_text"
+            android:textSize="17dp"
+            local:MvxBind="Text SelectedJourney.DepartureTime, Converter=DateTimeToTime" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/arrivalLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/departureLinearLayout"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/ToCityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To: "
+            android:textColor="@color/primary"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/toCityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ToCityTitleTextView"
+            android:text="To city"
+            android:textColor="@color/normal_text"
+            android:textSize="17dp"
+            local:MvxBind="Text SelectedJourney.ToCity.CityName" />
+        <TextView
+            android:id="@+id/arrivalTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ToCityTitleTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/toCityTextView"
+            android:text="Arrival time"
+            android:textColor="@color/normal_text"
+            android:textSize="17dp"
+            local:MvxBind="Text SelectedJourney.ArrivalTime, Converter=DateTimeToTime" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/priceLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/arrivalLinearLayout"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/PriceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:textColor="@color/primary"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/PriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PriceTitleTextView"
+            android:text="Price"
+            android:textColor="@color/normal_text"
+            android:textSize="17dp"
+            local:MvxBind="Text SelectedJourney.Price, Converter=CurrencyToString" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ticketsLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceLinearLayout"
+        android:layout_gravity="left"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/NumberOfTicketsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How many tickets do you need?"
+            android:textColor="@color/primary"
+            android:textSize="15dp" />
+        <EditText
+            android:id="@+id/NumberOfTicketsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NumberOfTicketsView"
+            android:inputType="number"
+            android:textSize="17dp"
+            local:MvxBind="Text NumberOfTravellers, Mode=TwoWay" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/AddToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CloseButton"
+        android:background="@drawable/button_selector"
+        android:text="Add to Saved Journeys"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        local:MvxBind="Click AddToSavedJourneysCommand" />
+    <Button
+        android:id="@+id/CloseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_button"
+        android:text="Close"
+        android:textColor="@color/accent"
+        android:textSize="17dp"
+        local:MvxBind="Click CloseCommand" />
+</RelativeLayout>

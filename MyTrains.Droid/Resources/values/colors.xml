@@ -1,0 +1,36 @@
+<resources>
+  <color name="white">#FFFFFF</color>
+  <color name="black">#000000</color>
+<!--  <color name="normal_text">#555555</color>-->
+
+  <color name="primary">#0674AD</color>
+  <color name="primaryDark">#186089</color>
+  <color name="accent">#3BCADB</color>
+	<color name="accentDark">#3ea4b4</color>
+  <color name="darkGray">#373B49</color>
+	<color name="normal_text">#373B49</color>
+	<color name="lightGray">#CCCCCC</color>
+	<color name="transparent">#00000000</color>
+  
+  <!--<color name="material_blue_500">#2196F3</color>
+  <color name="material_blue_700">#1976D2</color>
+  <color name="material_green_A200">#69F0AE</color>-->
+
+  <!--<color name="custom_header_text">#000</color>
+  <color name="custom_selected">#00d7cb</color>
+  <color name="custom_background">#ffffff</color>
+  <color name="custom_background_today">#00d7cb</color>
+  <color name="custom_background_disabled">#ffffff</color>
+  <color name="custom_text_selected">#FFFFFFFF</color>
+  <color name="custom_text_inactive">#ccc</color>
+  <color name="transparent">#00000000</color>
+  <color name="calendar_active_month_bg">#28C2E8</color>
+  <color name="calendar_bg">#555555</color>
+  <color name="calendar_divider">#782EE8</color>
+  <color name="calendar_inactive_month_bg">#28C2E8</color>
+  <color name="calendar_selected_day_bg">#3862FF</color>
+  <color name="calendar_text_inactive">#555555</color>
+  <color name="calendar_text_active">#555555</color>
+  <color name="calendar_text_selected">#555555</color>
+  <color name="calendar_text_unselectable">#555555</color>-->
+</resources>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="square.androidtimessquare" is-shell="true">
+  <name>TimesSquare</name>
+  <publisher>Xamarin Inc</publisher>
+  <publisher-url>http://xamarin.com</publisher-url>
+  <src-url>https://github.com/mattleibow/square-bindings</src-url>
+  <version>1.6.5.0</version>
+  <summary>Standalone Android widget for picking a single date from a calendar view..</summary>
+  <packages>
+    <package id="Square.AndroidTimesSquare" version="1.6.5.0" framework="android" />
+  </packages>
+  <samples>
+    <sample id="AndroidTimesSquareSample">
+      <name>Android Sample</name>
+      <summary>Android Sample</summary>
+    </sample>
+  </samples>
+</component>

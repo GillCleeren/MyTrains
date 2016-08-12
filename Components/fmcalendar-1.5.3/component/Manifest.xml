@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="fmcalendar">
+  <name>FMCalendar for iOS</name>
+  <publisher>Factory Mind</publisher>
+  <publisher-url>http://factorymind.com</publisher-url>
+  <version>1.5.3</version>
+  <summary>Awesome and customizable calendar control for your iOS app</summary>
+  <screenshots>
+    <img src="screenshots/screenshot1.jpg" title="screenshot1" />
+  </screenshots>
+  <samples>
+    <sample id="FMCalendarSample.iOS">
+      <name>iOS Sample</name>
+      <summary>iOS Sample</summary>
+    </sample>
+    <sample id="FMCalendarSample.iOS-Unified">
+      <name>iOS-Unified Sample</name>
+      <summary>iOS-Unified Sample</summary>
+    </sample>
+  </samples>
+</component>
